@@ -1,0 +1,162 @@
+$breakpoints: (
+        "xs": 0,
+        "sm": 480px,
+        "md": 768px,
+        "lg": 960px,
+        "xl": 1200px,
+);
+
+@mixin xs {
+  @media (min-width: map-get($breakpoints, "xs")) {
+    @content;
+    .nav-di,.salah-di {
+      display: none;
+    }
+    .tr-img {
+      padding-right: 0;
+    }
+    .salah-h{
+      font-size: 24px;
+    }
+    .passport-t{
+      font-size: 12px;
+    }
+  }
+}
+
+@mixin sm {
+  @media (min-width: map-get($breakpoints, "sm")) {
+    @content;
+    .passport-t{
+      font-size: 16px;
+    }
+  }
+}
+
+@mixin md {
+  @media (min-width: map-get($breakpoints, "md")) {
+    @content;
+    .trending-text {
+      font-size: 11px;
+    }
+    .salah-h {
+      font-size: 34px;
+    }
+    .salah-text {
+      font-size: 16px;
+    }
+    .most-h {
+      font-size: 1.6rem;
+    }
+    .most-text {
+      font-size: 0.8rem;
+    }
+    .number-text {
+      font-size: 1rem;
+    }
+    .editor-h {
+      font-size: 2rem;
+    }
+    .editor-text {
+      font-size: 0.9rem;
+    }
+    .editor-di {
+      padding-right: 0;
+    }
+    .opinion-h {
+      font-size: 1.4rem;
+    }
+    .opinion-text {
+      font-size: 0.6rem;
+    }
+    .final-h {
+      font-size: 1.2rem;
+    }
+    .final-text {
+      font-size: 0.8rem;
+    }
+    .final-t {
+      font-size: .8rem;
+    }
+    .nav-di, .f-img, .salah-di {
+      display: block;
+    }
+    .salah-di2 {
+      display: none;
+    }
+    .tr-img {
+      padding-right: 1rem;
+    }
+    .con {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    .salah-h{
+      font-size: 32px;
+    }
+  }
+}
+
+@mixin lg {
+  @media (min-width: map-get($breakpoints, "lg")) {
+    @content;
+    .trending-text {
+      font-size: 16px;
+    }
+    .salah-text {
+      font-size: 14px;
+    }
+    .most-h {
+      font-size: 2rem;
+    }
+    .most-text {
+      font-size: 1rem;
+    }
+    .number-text {
+      font-size: 1.2rem;
+    }
+    .editor-h {
+      font-size: 1.8rem;
+    }
+    .editor-text {
+      font-size: 0.8rem;
+    }
+    .editor-di {
+      padding-right: 10px;
+    }
+    .opinion-h {
+      font-size: 1.8rem;
+    }
+    .opinion-text {
+      font-size: 0.8rem;
+    }
+    .final-h {
+      font-size: 1.8rem;
+    }
+    .final-text {
+      font-size: 0.9rem;
+    }
+    .final-t {
+      font-size: .9rem;
+    }
+    .salah-h{
+      font-size: 38px;
+    }
+  }
+}
+
+@mixin xl {
+  @media (min-width: map-get($breakpoints, "xl")) {
+    @content;
+  }
+}
+
+@mixin breakpoint($bp: 0) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
